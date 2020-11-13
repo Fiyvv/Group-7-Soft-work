@@ -78,10 +78,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 42
+        "__id__": 43
       },
       {
-        "__id__": 43
+        "__id__": 44
       }
     ],
     "_prefab": null,
@@ -1107,6 +1107,9 @@
     "_components": [
       {
         "__id__": 41
+      },
+      {
+        "__id__": 42
       }
     ],
     "_prefab": null,
@@ -1134,7 +1137,7 @@
       "array": [
         0,
         0,
-        385.3813,
+        385.38130468407525,
         0,
         0,
         0,
@@ -1814,7 +1817,7 @@
     },
     "landImpulse": 100,
     "portImpulse": 2300,
-    "cameraActive": 1,
+    "cameraActive": 0,
     "_id": "45vXed2+xMup6qj7+SLz1T"
   },
   {
@@ -1852,6 +1855,22 @@
     "_renderStages": 1,
     "_alignWithScreen": true,
     "_id": "12WxhBY0tLW6lex5nKeF5T"
+  },
+  {
+    "__type__": "f5e06CTwKtDvYpj29RlSCnT",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 28
+    },
+    "_enabled": true,
+    "target": {
+      "__id__": 11
+    },
+    "tieldMap": {
+      "__id__": 5
+    },
+    "_id": "19qS2xBJBDn6HCUNWjlWqL"
   },
   {
     "__type__": "cc.Canvas",
