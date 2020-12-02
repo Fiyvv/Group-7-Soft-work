@@ -12,7 +12,7 @@
   "webOrientation": "auto",
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
-  "mainCompressionType": "subpackage",
+  "mainCompressionType": "none",
   "mainIsRemote": false,
   "optimizeHotUpdate": false,
   "md5Cache": false,

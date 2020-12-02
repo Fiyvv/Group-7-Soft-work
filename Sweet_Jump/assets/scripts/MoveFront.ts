@@ -94,6 +94,7 @@ class MoveFront {
     landImpulse: number,
     portImpulse: number,
     scroe: cc.Node,
+    show_score:cc.Node,
   ) {
     this.leftBtn = leftBtn
     this.rightBtn = rightBtn
@@ -345,6 +346,8 @@ export default class Move extends cc.Component {
   score: cc.Node = null
   @property(cc.ProgressBar)
   pprogress: cc.ProgressBar = null
+  @property(cc.Node)
+  show_score: cc.Node = null
 
   @property({
     type: cc.Integer,//字符串为整数
@@ -378,7 +381,8 @@ export default class Move extends cc.Component {
       this.landImpulse,
       this.portImpulse,
       this.score,
-      this.pprogress
+      this.pprogress,
+      this.show_score
     )
 
     this.camera = cc.Canvas.instance.node.getComponentInChildren(cc.Camera).node
@@ -409,6 +413,7 @@ export default class Move extends cc.Component {
     this.MoveFront.Y=Math.ceil(this.hero.position.y+235)
     // console.log( this.MoveFront.Y)
     this.score.getComponent(cc.Label).string= this.MoveFront.Y.toString()
+    this.show_score.getComponent(cc.Label).string= "当前成绩："+this.MoveFront.Y.toString()
     if(this.MoveFront.add_time<=30)
     {
       this.pprogress.node.opacity=0;
