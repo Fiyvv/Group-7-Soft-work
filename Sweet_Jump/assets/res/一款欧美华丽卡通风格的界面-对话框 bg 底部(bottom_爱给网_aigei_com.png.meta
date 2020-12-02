@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "3277b605-1ff2-445b-96fd-15dee079a609",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 477,
+  "height": 374,
+  "platformSettings": {},
+  "subMetas": {
+    "一款欧美华丽卡通风格的界面-对话框 bg 底部(bottom_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "8dbf7e96-4657-4962-b723-29bc0b9b4742",
+      "rawTextureUuid": "3277b605-1ff2-445b-96fd-15dee079a609",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 477,
+      "height": 374,
+      "rawWidth": 477,
+      "rawHeight": 374,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

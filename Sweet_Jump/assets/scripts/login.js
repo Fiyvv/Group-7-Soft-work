@@ -9,13 +9,28 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
     },
+
+    // LIFE-CYCLE CALLBACKS:
+
+    // onLoad () {},
+
     start() {
-        wx.cloud.init({
-            env: "sweet-jump-1gqjk1fd388a8ee2"
-        })
-        const db = wx.cloud.database()
         wx.getSetting({
             success(res) {
                 // 已授权
@@ -45,32 +60,12 @@ cc.Class({
                     });
                     button.onTap(function (res) {
                         if (res.userInfo) {
-                            wx.cloud.callFunction({
-                                name: 'login',
-                                success: res => {
-                                    var openid = res.openid
-                                    db.collection('users').add({
-                                        // data 字段表示需新增的 JSON 数据
-                                        data: {
-                                            "_openid": openid,
-                                            "pass_time": 0,
-                                            "passed": false,
-                                            "score": 0
-                                        },
-                                        success: function (res) {
-                                            // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
-                                            console.log(res)
-                                        }
-                                    })
-
-                                }
-                            })
                             button.destroy();
-
+                            // 进入下一步，比如【选择服务器】
                         } else {
                             wx.showModal({
                                 title: "温馨提示",
-                                content: "为了实现老师的用户量要求，请登陆，谢谢朋友们",
+                                content: "《XXX》是一款在线对战游戏，需要您的用户信息登录游戏。",
                                 showCancel: false,
                             });
                         }
@@ -81,12 +76,6 @@ cc.Class({
         });
 
     },
-
-    onLoad() {},
-
-    toScene: function () {
-        cc.director.loadScene("game")
-    }
 
     // update (dt) {},
 });
